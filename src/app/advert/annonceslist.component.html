@@ -1,0 +1,52 @@
+
+<sendzy-nav-bar></sendzy-nav-bar>
+<div id="searchtrips" class="container">
+  <div class="row justify-content-md-center">
+   
+    <form #formTrips="ngForm" class="form-inline" (submit)="FindTripsByDate(formTrips)" novalidate>
+      <div class="form-group">
+        <label class="control-label mr-2" for="depart">Depart :</label>
+        <input type="text" placeholder="depart" name="dateDepart" id="depart" class="form-control"  [(ngModel)]="model.dateDepart"
+        bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="control-label mr-2 ml-2" for="depart">Arrivee :</label>
+        <input type="text" placeholder="arrivee" name="arrivee" id="arrivee" class="form-control"  [(ngModel)]="model.dateArrivee"
+        bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" autocomplete="off">
+      </div>
+
+      <button class="btn btn-primary ml-2" [disabled]="formTrips.invalid" type="submit">Valider</button>
+    </form>
+  </div>
+</div>
+
+<div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <alert></alert>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="row justify-content-md-center">
+      <div>
+          <div *ngIf="Trips?.length>0" class="alert alert-warning text-center">
+              Available trip from <strong> {{model.dateDepart | date: 'dd/MM/yyyy'}}</strong> to <strong>{{model.dateArrivee | date: 'dd/MM/yyyy'}}</strong>
+            </div>
+          <div id="triplist" *ngFor="let trip of Trips">
+          <app-trip-card [trip]="trip" ></app-trip-card>
+          <div *ngIf="Trips.length==0" class="alert alert-info noresults text-center">
+               there are  no trips matching your search ... 
+          </div>
+        </div>
+  </div>
+
+</div>
+
+<!-- 
+<pre>
+    hasLanguageError : {{hasLanguageError}}
+  isPristine : {{form.pristine}}
+  departcity : {{depart.value}}
+  arrivecity : {{arrive.value}}
+</pre>  -->

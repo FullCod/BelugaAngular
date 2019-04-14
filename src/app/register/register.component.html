@@ -1,0 +1,70 @@
+<div class="container register-box animated fadeInDown">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-md-offset-3">
+      <h2 class="text-center text-primary">Register</h2>
+      <hr>
+
+      <div class="form-group">
+        <label class="control-label" style="margin-right:10px">I am a: </label>
+        <label class="radio-inline">
+          <input class="mr-3" type="radio" value="male" formControlName="gender">Male
+        </label>
+        <label class="radio-inline ml-3">
+          <input class="mr-3" type="radio" value="female" formControlName="gender">Female
+        </label>
+      </div>
+      
+      <form name="form" [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="form-group">
+          <input type="text" placeholder="First name" [ngClass]="{'is-invalid' : registerForm.get('firstName').errors && registerForm.get('firstName').touched}"
+            class="form-control" formControlName="firstName" />
+          <div class="invalid-feedback">Please enter a valid first name</div>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Last Name" [ngClass]="{'is-invalid' : registerForm.get('lastName').errors && registerForm.get('lastName').touched}"
+            class="form-control" formControlName="lastName" />
+          <div class="invalid-feedback">Please enter a valid last name</div>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="User Name" class="form-control" formControlName="userName" />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" [ngClass]="{'is-invalid' : registerForm.get('email').errors && registerForm.get('email').touched}"
+            class="form-control" formControlName="email" />
+          <div class="invalid-feedback">Email is required</div>
+        </div>
+        
+    <div class="form-group">
+        <input [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched}" class="form-control"
+          placeholder="Date of Birth" formControlName="dateOfBirth" type="text" bsDatepicker [bsConfig] = "bsConfig" >
+        <div class="invalid-feedback" *ngIf="registerForm.get('dateOfBirth').touched && registerForm.get('dateOfBirth').hasError('required')">Date of Birth is required</div>
+      </div>
+
+        <div class="form-group">
+          <input type="password" placeholder="Password" [ngClass]="{'is-invalid' : registerForm.get('password').errors && registerForm.get('password').touched}"
+            class="form-control" formControlName="password" />
+          <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched">
+            Password is required</div>
+          <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').touched">
+            password must be at least 4 characters </div>
+          <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('maxlength') && registerForm.get('password').touched">
+            password must not exceed 8 characters</div>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Confirm password" [ngClass]="{'is-invalid' : registerForm.get('confirmPassWord').errors && registerForm.get('confirmPassWord').touched
+             ||registerForm.hasError('mismatch') && registerForm.get('confirmPassWord').touched}"
+            class="form-control" formControlName="confirmPassWord" />
+          <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassWord').hasError('required') && registerForm.get('confirmPassWord').touched">
+            confirm password is required</div>
+          <div class="invalid-feedback" *ngIf="registerForm.hasError('mismatch') && registerForm.get('confirmPassWord').touched ">
+            password must match</div>
+        </div>
+        <div class="form-group">
+          <button [disabled]="!registerForm.valid" class="btn btn-primary">Register</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+          <a [routerLink]="['/home']" class="btn btn-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

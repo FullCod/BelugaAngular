@@ -1,0 +1,62 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top ">
+
+      <h1>
+        <a href="#" class="navbar-brand">
+          <img src="http://via.placeholder.com/40x40" alt="brand logo"> BELUGA
+        </a>
+      </h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link smooth-scroll"  [routerLink]="['/annonceslist']">Les annonces</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+            <a class="nav-link smooth-scroll" [routerLink]="['/advert']">Publier une annonce</a>
+          </li>
+        </ul>
+
+        <ul *ngIf="!loggedIn()" class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+            <a class="nav-link smooth-scroll" [routerLink]="['/login']" >Se connecter</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
+            <a class="nav-link smooth-scroll" [routerLink]="['/register']">S'inscire</a>
+          </li>
+        </ul>
+
+        <ul *ngIf="loggedIn()" class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a  class="nav-link" [routerLink]="['/members']">Members</a>
+          </li>
+          <li class="nav-item previewpos">
+              <a href="#"> <div data-toggle="modal" data-target="#picmodal">
+                <img src="{{photoUrl|| '../../../../assets/user.jpg'}}" 
+                alt="" class="img-responsive preview2"></div></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <!-- <div>
+                  <img src="{{authenticationService.currentUser?.photoUrl}}" alt="">
+                </div> -->
+              Welcome {{authenticationService.decodedToken?.unique_name | titlecase}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="['/member']" >
+                <i class="fa fa-user"></i> Mon compte</a>
+              <a class="dropdown-item" href="#">Mes annonces</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" (click)="logout()">
+                <i class="fa fa-sign-out"></i> Se deconnecter</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
