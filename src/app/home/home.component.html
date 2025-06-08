@@ -1,5 +1,14 @@
-
-
+<div class="hero-section d-flex align-items-center justify-content-center text-center" style="min-height: 80vh; background: linear-gradient(135deg, #7b4397 0%, #dc2430 100%); color: #fff;">
+  <div class="container">
+    <img src="assets/logo.png" alt="Beluga Logo" style="width: 120px; margin-bottom: 2rem; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));">
+    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Expédiez et Transportez en Toute Confiance</h1>
+    <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">La plateforme moderne pour l'envoi et le transport d'objets entre particuliers, partout en France et en Europe.</p>
+    <div class="d-flex flex-column flex-md-row justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+      <a href="/register" class="btn btn-lg btn-warning rounded-pill shadow px-5 mb-2 mb-md-0">Créer un compte</a>
+      <a href="#ccmarche" class="btn btn-lg btn-outline-light rounded-pill shadow px-5">Découvrir</a>
+    </div>
+  </div>
+</div>
 
 <div class="bg-1 padding-150 animated fadeInDown" id="start">
   <div class="container">
@@ -29,86 +38,43 @@
       - grille : ordering
       - font awesome
   -->
-  <div id="ccmarche" class="padding-80">
+  <div id="ccmarche" class="padding-80 bg-light">
       <div class="container">
-           <!-- row-->
-          <div class="row text-center">
-              <div class="col-md-12">                     
-                  <h2 class="font-70">COMMENT ÇA MARCHE</h2>
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <h2 class="display-5 fw-bold">Comment ça marche ?</h2>
+            <p class="text-muted">Envoyez ou transportez des objets en toute simplicité, sécurité et convivialité.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card border-0 shadow h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3"><i class="fa-solid fa-box-open text-primary me-2"></i> Je veux expédier un objet</h3>
+                <ol class="list-group list-group-numbered list-group-flush mb-0">
+                  <li class="list-group-item">Je publie une annonce sur Beluga</li>
+                  <li class="list-group-item">Beluga recherche des voyageurs vers la destination de votre colis</li>
+                  <li class="list-group-item">Vous discutez librement sur les modalités</li>
+                  <li class="list-group-item">Vous vous évaluez mutuellement après réception du colis</li>
+                </ol>
               </div>
+            </div>
           </div>
-          <!-- end row-->
-          <br> <br>
-
-          <!-- row-->
-          <div class="row">
-
-              <div class="col-md-12">
-                  <!-- 1st row -->
-                  <div class="row text-center">
-                          <div class="card   border-success"  >
-                              <div class="card-header bg-transparent border-success">
-                                <h2> Je veux expédier un objet</h2>
-                              </div>
-                              <div class="card-body text-left">
-                                <h5 class="card-title">Faites des economies sur les frais d'envoi de votre objet</h5>
-                                <button type="button" class="btn btn-primary ccenum">
-                                   <span class="badge badge-primary">1</span>
-                                  </button>
-                                  <span> Je publie une annonce sur Beluga</span>
-                                  <br>
-                                <button type="button" class="btn btn-primary ccenum">
-                                    <span class="badge badge-primary">2</span>
-                                    </button>
-                                    <span> Beluga recherche des voyageurs vers la destination de votre colis</span>
-                                <br>
-                                <button type="button" class="btn btn-primary ccenum">
-                                    <span class="badge badge-primary">3</span>
-                                    </button>
-                                    <span> Vous discutez librement sur les modalités</span>
-                                   <br>
-                                   <button type="button" class="btn btn-primary ccenum">
-                                      <span class="badge badge-primary">4</span>
-                                      </button>
-                                      <span> Vous vous évaluez mutuellement après réception du colis sur Beluga</span>
-                                  </div>
-                            </div>
-  
-                           <div class="card ml-auto border-info" >
-                              <div class="card-header bg-transparent border-info">
-                                <h2> Je veux transporter un objet</h2>
-                              </div>
-                              <div class="card-body text-left">
-                                <h5 class="card-title"> Je veux rentabiliser mon trajet et rendre service</h5>
-                                <button type="button" class="btn btn-info ccenum">
-                                    <span class="badge badge-info">1</span>
-                                   </button>
-                                   <span> Je publie mon trajet sur Beluga</span>
-                                   <br>
-                                   <button type="button" class="btn btn-info ccenum">
-                                      <span class="badge badge-info">2</span>
-                                     </button>
-                                     <span> Beluga recherche des expéditeurs vers votre destination</span>
-                                     <br>
-                                     <button type="button" class="btn btn-info ccenum">
-                                        <span class="badge badge-info">3</span>
-                                       </button>
-                                       <span> Vous discutez librement sur les modalités</span>
-                                       <br>
-                                       <button type="button" class="btn btn-info ccenum">
-                                          <span class="badge badge-info">4</span>
-                                         </button>
-                                         <span> Vous vous évaluez mutuellement après réception du colis</span>
-                              </div>
-                            </div>
-                  </div>
-
-
-              </div>        
+          <div class="col-md-6">
+            <div class="card border-0 shadow h-100">
+              <div class="card-body">
+                <h3 class="card-title mb-3"><i class="fa-solid fa-route text-success me-2"></i> Je veux transporter un objet</h3>
+                <ol class="list-group list-group-numbered list-group-flush mb-0">
+                  <li class="list-group-item">Je publie mon trajet sur Beluga</li>
+                  <li class="list-group-item">Beluga recherche des expéditeurs vers votre destination</li>
+                  <li class="list-group-item">Vous discutez librement sur les modalités</li>
+                  <li class="list-group-item">Vous vous évaluez mutuellement après réception du colis</li>
+                </ol>
+              </div>
+            </div>
           </div>
-          <!-- end row-->
-
-      </div>    
+        </div>
+      </div>
     </div>
 
 <hr>
@@ -242,108 +208,85 @@
        </div>
       </div>
 
-<div id="communaute" class="bg-cloud text-dark">
-    <div class="container padding-80">
-        <div class="row justify-content-md-center">
-            <h2 class="font-70 light">NOTRE COMMUNAUTÉ</h2>
+<!-- Modernized Trust/Community Section -->
+<div id="communaute" class="bg-white text-dark py-5">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 text-center">
+        <h2 class="fw-bold mb-3">Notre communauté</h2>
+        <p class="text-muted">Des milliers d'utilisateurs satisfaits partout en France et en Europe.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <img src="assets/profilepictures/user.jpg" alt="Membre" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+          <h5 class="fw-bold">Beluga s'agrandit</h5>
+          <p class="text-muted">Rejoignez notre communauté de transporteurs et expéditeurs. Des objets en partance vous attendent !</p>
         </div>
-        <br>
-        <div class="row justify-content-md-center">
-        <div class="card-deck">
-            <div class="col-md-4">
-                <div class="card mr-auto">
-                    <div class="card-body">
-                      <h3 class="card-title">Beluga s'aggrandit</h3>
-                      <p class="card-text text-justify">Beluga s'aggrandit tous les jours. Rejoignez maintenant notre communauté de transporteurs et expéditeurs. Des objets en partance vou attente.</p>
-                    </div>
-                  </div>
-             </div>
-             <div class="col-md-4">
-                <div class="card w-100">
-                    <div class="card-body">
-                      <h3 class="card-title">Beluga sur les réseaux Facebook et twitter</h3>
-                      <p class="card-text text-justify">Liker Beluga sur facebook et Partager nos publications avec de vos amis. Il est possible qu'une personne y trouve un objet à transporter.</p>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="card w-100">
-                      <div class="card-body">
-                        <h3 class="card-title">Inviter vos amis</h3>
-                        <p class="card-text text-justify">Inviter vos amis à découvrir les nouveautés Sendizy. Créer votre compte en quelques minutes et Publier vos annonces gratuitement.</p>
-                      </div>
-                    </div>
-             </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <img src="assets/profilepictures/user.jpg" alt="Réseaux" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+          <h5 class="fw-bold">Beluga sur les réseaux</h5>
+          <p class="text-muted">Suivez-nous sur Facebook et partagez nos publications. Il est possible qu'une personne y trouve un objet à transporter.</p>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 text-center p-4">
+          <img src="assets/profilepictures/user.jpg" alt="Inviter" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+          <h5 class="fw-bold">Invitez vos amis</h5>
+          <p class="text-muted">Invitez vos amis à découvrir les nouveautés Beluga. Créez votre compte en quelques minutes et publiez vos annonces gratuitement.</p>
         </div>
-        <br><hr>
-    </div>      
+      </div>
+    </div>
   </div>
+</div>
 
-
-<div id="joindre" class="bg-cloud text-dark">
-    <div class="container padding-80">
-        <div class="row justify-content-md-center">
-            <h2 class="font-70 light">Rejoignez nous sur Facebook</h2>
-        </div>
-        <br>
-        <div class="row justify-content-md-center">
-            <div class="fb-page" data-href="https://www.facebook.com/sendizy.fr/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div><br>	
-        </div>
-        <br><hr>
-    </div>      
+<!-- Modernized Footer -->
+<div id="footer" class="bg-dark text-light py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Société</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://sendizy.fr/genese" class="text-light">A propos</a></li>
+          <li><a href="http://sendizy.fr/partenariats" class="text-light">Partenariats</a></li>
+          <li><a href="http://sendizy.fr/nousrejoindre" class="text-light">Nous rejoindre</a></li>
+          <li><a href="http://sendizy.fr/mentions" class="text-light">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Comment ça marche</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://sendizy.fr/utilisation" class="text-light">Mode d'emploi</a></li>
+          <li><a href="http://sendizy.fr/cgu" class="text-light">CGU</a></li>
+          <li><a href="http://sendizy.fr/interdictions" class="text-light">Marchandises réglementées</a></li>
+          <li><a href="http://sendizy.fr/peser" class="text-light">Bien peser son colis</a></li>
+          <li><a href="http://sendizy.fr/envoi_regles" class="text-light">Règles d'envoi d'un colis</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Mon compte</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://sendizy.fr/inscription" class="text-light">S'inscrire</a></li>
+          <li><a href="http://sendizy.fr/connexion" class="text-light">Se connecter</a></li>
+          <li><a href="http://sendizy.fr/mdpoublie" class="text-light">Mot de passe oublié</a></li>
+          <li><a href="http://sendizy.fr/diffusion" class="text-light">Charte</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Aide</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://sendizy.fr/faq" class="text-light">FAQ</a></li>
+          <li><a href="http://sendizy.fr/contact" class="text-light">Nous contacter</a></li>
+          <li><a href="http://sendizy.fr/confiance" class="text-light">Confiance et sécurité</a></li>
+          <li><a href="http://sendizy.fr/experiences" class="text-light">Niveau d'expérience</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="mb-0">&copy; 2025 Beluga | Tous droits réservés</p>
+    </div>
   </div>
-
-
-<div id="footer" class="bg-cloud text-dark">
-
-        <div class="wrapper_footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="text-left">Société</h3>
-                  <ul>
-                    <li><a href="http://sendizy.fr/genese">A propos</a></li>
-                      <li><a href="http://sendizy.fr/partenariats">Partenariats</a></li>
-                      <li><a href="http://sendizy.fr/nousrejoindre">Nous rejoindre</a></li>
-                      <li><a href="http://sendizy.fr/mentions">Mentions légales</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-3">
-                <h3 class="text-left">Comment ça marche</h3>
-                  <ul>
-                      <li><a href="http://sendizy.fr/utilisation">Mode d'emploi</a></li>
-                      <li><a href="http://sendizy.fr/cgu">CGU</a></li>
-                      <li><a href="http://sendizy.fr/interdictions">Marchandises reglementées</a></li>
-                      <li><a href="http://sendizy.fr/peser">Bien peser son colis</a></li>
-                      <li><a href="http://sendizy.fr/envoi_regles">Règles d'envoi d'un colis</a></li>
-                    </ul>
-              </div>
-              <div class="col-md-3">
-                    <h3 class="">Mon compte</h3>
-                    <ul>
-                        <li><a href="http://sendizy.fr/inscription">S'inscrire</a></li>
-                        <li><a href="http://sendizy.fr/connexion">Se connecter</a></li>
-                        <li><a href="http://sendizy.fr/mdpoublie">Mot de passe oublié</a></li>
-                      <li><a href="http://sendizy.fr/diffusion">Charte</a></li>
-                    </ul>
-                  </div>
-              <div class="col-md-3">
-                <h3 class="text-left">Aide</h3>
-                  <ul>
-                      <li><a href="http://sendizy.fr/faq">FAQ</a></li>
-                      <li><a href="http://sendizy.fr/contact">Nous contacter</a></li>
-                      <li><a href="http://sendizy.fr/confiance">Confiance et sécurité</a></li>
-                      <li><a href="http://sendizy.fr/experiences">Niveau d'expérience</a></li>
-                    </ul>
-              </div>
-            </div>
-            
-          <div class="clear"> </div>
-              <div class="text-center">
-                <p class="copy-right">&copy; 2016 Beluga | Tous droits réservés</p>
-                <a class="to-top" href="#header"><span> </span> </a>
-              </div>
-          </div>	
-        </div>
-  </div>
+</div>

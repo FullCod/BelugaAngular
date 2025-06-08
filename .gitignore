@@ -1,0 +1,44 @@
+# Angular & Node
+node_modules/
+dist/
+build/
+.tmp/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled output
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+
+# Coverage
+coverage/
+
+# Misc
+*.tgz
+package-lock.json
+
+# Angular specific
+.angular/cache/
+.angular/local/
+
+# Optional: SSL keys (if not tracked)
+ssl/*.pfx
+ssl/*.cer
+ssl/*.crt
+ssl/*.key
